@@ -1,4 +1,4 @@
- oProgram
+Program
 ---
 `Program` provides a rust analogue, `perror`, that emulates C's
 `perror` from `stdio.h`.
