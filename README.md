@@ -21,8 +21,6 @@ fn main() {
     } else {
         MY_PROGRAM.perror("it can print anything this is std::fmt::Display")
     }
-
-    // ...
 }
 ```
 
