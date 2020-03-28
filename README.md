@@ -1,9 +1,9 @@
- Program
+ oProgram
 ---
-Program provides a rust analogue, `perror`, that emulates C's
+`Program` provides a rust analogue, `perror`, that emulates C's
 `perror` from `stdio.h`.
 
-Program is best used alongside [`lazy_static`](https://github.com/rust-lang-nursery/lazy-static.rs).
+`Program` is best used alongside [`lazy_static`](https://github.com/rust-lang-nursery/lazy-static.rs).
 ```rust
 use lazy_static::lazy_static;                                                   
 use program::Program;
