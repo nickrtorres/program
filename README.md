@@ -17,7 +17,9 @@ fn main() {
         Program.perror("something bad happened")
     } else if something_really_bad {
         Program.perror(format!("something really bad happened and we need to specify and integer: {}", 42))
-    } ...
+    }
+
+    // ...
 }
 ```
 
