@@ -1,6 +1,6 @@
 //! Program provides a single divergent method `perror` to emulate C's `perror`
 
-/// Store and expose a static, shared reference to a process name
+/// Store and expose a static, shared reference to a process name.
 pub struct Program {
     pub name: &'static str,
 }
