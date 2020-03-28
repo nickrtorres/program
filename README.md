@@ -14,9 +14,12 @@ fn main() {
     // ...
 
     if something_bad {
-        MY_PROGRAM.perror("something bad happened")
+        MY_PROGRAM.perror("it can print &str")
     } else if something_really_bad {
-        MY_PROGRAM.perror(format!("something really bad happened and we need to specify and integer: {}", 42))
+        let text = "text";
+        MY_PROGRAM.perror(format!("it can print formatted {}", text))
+    } else {
+        MY_PROGRAM.perror("it can print anything this is std::fmt::Display")
     }
 
     // ...
