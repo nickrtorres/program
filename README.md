@@ -1,4 +1,6 @@
-Program affords metadata and a divergent method, `perror`, that emulates C's
+ Program
+---
+Program provides a rust analogue, `perror`, that emulates C's
 `perror` from `stdio.h`.
 
 Program is best used alongside [`lazy_static`](https://github.com/rust-lang-nursery/lazy-static.rs).
