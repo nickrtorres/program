@@ -6,6 +6,7 @@ pub struct Program {
 }
 
 impl Program {
+    /// Create a new `Program` that holds a static, shared reference to a program name.
     pub fn new(name: &'static str) -> Self {
         Program { name }
     }
