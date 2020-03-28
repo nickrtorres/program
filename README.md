@@ -1,7 +1,6 @@
 Program
 ---
-`Program` provides a rust analogue, `perror`, that emulates C's
-`perror` from `stdio.h`.
+`Program` emulates C's `perror`.
 
 `Program` is best used alongside [`lazy_static`](https://github.com/rust-lang-nursery/lazy-static.rs).
 ```rust
