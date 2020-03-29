@@ -8,7 +8,7 @@ use lazy_static::lazy_static;
 use program::Program;
 
 lazy_static! {
-    static ref MY_PROGRAM: Program = Program::new("head");
+    static ref MY_PROGRAM: Program = Program::new("MyProgram");
 }
 
 fn main() {
