@@ -27,7 +27,7 @@ pub fn perror<E: std::fmt::Display>(e: E) -> ! {
 ///
 /// Return `Some(process_name)` or `None` if it cannot be obtained.
 fn process_name() -> Option<ffi::OsString> {
-    let cmd = std::env::current_exe().map_or(None, Some)?;
+    let cmd = std::env::current_exe().ok()?;
     let process = cmd.file_name()?;
     Some(process.to_os_string())
 }
