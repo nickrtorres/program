@@ -2,25 +2,20 @@ Program
 ---
 `Program` emulates C's `perror`.
 
-`Program` is best used alongside [`lazy_static`](https://github.com/rust-lang-nursery/lazy-static.rs).
 ```rust
-use lazy_static::lazy_static;                                                   
-use program::Program;
+use program::perror;
+use std::io::{self};
 
-lazy_static! {
-    static ref MY_PROGRAM: Program = Program::new("MyProgram");
+fn print_msg(_: &str) -> io::Result<()> {
+    Err(io::Error::new(
+        io::ErrorKind::Other,
+        "something went wrong!",
+    ))
 }
 
 fn main() {
-    // ...
-
-    if something_bad {
-        MY_PROGRAM.perror("it can print &str")
-    } else if something_really_bad {
-        let text = "text";
-        MY_PROGRAM.perror(format!("it can print formatted {}", text))
-    } else {
-        MY_PROGRAM.perror("it can print anything this is std::fmt::Display")
+    if let Err(e) = print_msg("Hello, world!") {
+        perror(e);
     }
 }
 ```
