@@ -2,7 +2,7 @@ Program
 ---
 `Program` emulates C's `perror`.
 
-![crates](https://img.shields.io/crates/v/program)
+[![Crates.io](https://img.shields.io/crates/v/program)](https://crates.io/crates/program)
 
 ```rust
 use program::perror;
