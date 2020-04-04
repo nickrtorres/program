@@ -19,7 +19,7 @@ fn main() {
     }
 }
 ```
-```sh
+```
 $ cargo run
    Compiling example v0.1.0 (/root/example)
     Finished dev [unoptimized + debuginfo] target(s) in 0.34s
