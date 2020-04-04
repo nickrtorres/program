@@ -1,4 +1,4 @@
-//! Program provides a single divergent method `perror` to emulate C's `perror`
+//! Program provides a single divergent function (`perror`) to emulate C's `perror`
 
 #![warn(clippy::pedantic)]
 
