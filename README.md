@@ -1,6 +1,7 @@
 Program
 ---
 `Program` emulates C's `perror`.
+
 ![crates](https://img.shields.io/crates/v/program)
 
 ```rust
