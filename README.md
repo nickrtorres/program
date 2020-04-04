@@ -1,4 +1,5 @@
 Program
+![crates](https://img.shields.io/crates/d/program)
 ---
 `Program` emulates C's `perror`.
 
