@@ -6,7 +6,7 @@ use std::ffi;
 use std::io::{self, Write};
 use std::process;
 
-/// Print an error message to `stderr` and exit with an exit status of `1`.
+/// Prints an error message to `stderr` and exit with an exit status of `1`.
 ///
 /// While this function attempts to obtain and write the  name of the current process to `stderr`,
 /// write `e` to `stderr`, and exit with an exit status of `1`, only exiting is guranteed.
@@ -23,9 +23,7 @@ pub fn perror<E: std::fmt::Display>(e: E) -> ! {
     process::exit(1)
 }
 
-/// Attempt to obtain the name of the current process.
-///
-/// Return `Some(process_name)` or `None` if it cannot be obtained.
+/// Attempts to obtain the name of the current process.
 fn process_name() -> Option<ffi::OsString> {
     let cmd = std::env::current_exe().ok()?;
     let process = cmd.file_name()?;
