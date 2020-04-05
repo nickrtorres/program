@@ -2,6 +2,7 @@
 
 #![warn(clippy::pedantic)]
 
+use std::env;
 use std::ffi;
 use std::io::{self, Write};
 use std::path;
@@ -16,7 +17,7 @@ use std::process;
 /// the error given by the user. If the error given by the use cannot be written to stderr just
 /// exit with an exit status of 1.
 pub fn perror<E: std::fmt::Display>(e: E) -> ! {
-    if let Some(cmd) = process_name(std::env::current_exe()) {
+    if let Some(cmd) = process_name(env::current_exe()) {
         let _ = write!(io::stderr(), "{}: ", cmd.to_string_lossy());
     }
 
